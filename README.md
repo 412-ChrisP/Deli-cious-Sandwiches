@@ -1,17 +1,17 @@
-# Project Title
+# Deli-cious Sandwiches
 
 ## Description of the Project
 
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
+- This is a CLI application intended to serve as a sandwich shop giving users options to purchase customizable sandwiches based on personal preferences and side options as well.
 
-![Class Diagram](path/to/your/class_diagram.png)
+[Deli-ciousSandwichesDiagram.drawio](Deli-ciousSandwichesDiagram.drawio)
 
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
-
-- As a user, I want to be able to input my data, so that the application can process it accordingly.
-- As a user, I want to receive immediate feedback, so I can understand what to do next.
+- As a user, I want to be able to add chips and drinks to my order, so I can be satisfied with my meal.
+- As a user, I want to be able to choose the size bread, to meet my appetite.
+- As a user, I want to pick different toppings such as meat, cheese, suaces; to cater to my preferences.
+- As a user, I want to be able to print and save my receipt, so I can reference my transaction history.
 
 ## Setup
 
@@ -45,26 +45,18 @@ Include screenshots or GIFs that show your application in action. Use tools like
 
 ## Future Work
 
-Outline potential future enhancements or functionalities you might consider adding:
-
-- Additional feature to be developed.
-- Improvement of current functionalities.
+- 
 
 ## Resources
-
-List resources such as tutorials, articles, or documentation that helped you during the project.
 
 - [Java Programming Tutorial](https://www.example.com)
 - [Effective Java](https://www.example.com)
 
 ## Team Members
 
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
+- **Chris Pham** - Project designer
 
 ## Thanks
 
-Express gratitude towards those who provided help, guidance, or resources:
-
-- Thank you to [Mentor's Name] for continuous support and guidance.
+- Thank you to [Raymond maroun] for continuous support and guidance.
 - A special thanks to all teammates for their dedication and teamwork.
