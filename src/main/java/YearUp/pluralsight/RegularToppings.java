@@ -7,6 +7,12 @@ public class RegularToppings extends Toppings
         super(name);
     }
 
+    public String getRegularTopping()
+    {
+
+        return "";
+    }
+
     @Override
     public double calcToppingPrice(SandwichSize size)
     {

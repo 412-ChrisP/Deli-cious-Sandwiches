@@ -14,5 +14,10 @@ public abstract class Toppings
         return name;
     }
 
+    public void toppingType()
+    {
+        
+    }
+
     public abstract double calcToppingPrice(SandwichSize size);
 }

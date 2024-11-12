@@ -7,6 +7,12 @@ public class CheeseToppings extends Toppings
         super(name);
     }
 
+    public String getCheeseTopping()
+    {
+
+        return "";
+    }
+
     @Override
     public double calcToppingPrice(SandwichSize size)
     {

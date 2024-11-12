@@ -7,6 +7,12 @@ public class SauceToppings extends Toppings
         super(name);
     }
 
+    public String getSauceTopping()
+    {
+
+        return "";
+    }
+
     @Override
     public double calcToppingPrice(SandwichSize size)
     {
