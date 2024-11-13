@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Chips
 {
-    private String type;
+    private final String type;
 
     public Chips(String type)
     {
@@ -13,12 +13,12 @@ public class Chips
 
     public double getChipPrice()
     {
-
-        return 0.0;
+        return 1.50;
     }
 
-    public void addChips(double price)
+    @Override
+    public String toString()
     {
-
+        return "Chips{" + "type: '" + type + '\'' + '}';
     }
 }

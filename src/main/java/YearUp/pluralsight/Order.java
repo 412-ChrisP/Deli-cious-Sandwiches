@@ -4,9 +4,9 @@ import java.util.*;
 
 public class Order
 {
-    private List<Sandwich> sandwiches = new ArrayList<>();
-    private List<Drink> drinks = new ArrayList<>();
-    private List<Chips> chips = new ArrayList<>();
+    private final List<Sandwich> sandwiches = new ArrayList<>();
+    private final List<Drink> drinks = new ArrayList<>();
+    private final List<Chips> chips = new ArrayList<>();
 
     public void addSandwich(Sandwich sandwich)
     {

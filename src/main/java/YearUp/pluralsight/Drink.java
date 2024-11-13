@@ -13,12 +13,22 @@ public class Drink
 
     public double getDrinkPrice()
     {
-
-        return 0.0;
+        return switch (size.toLowerCase())
+        {
+            case "small" -> 2.00;
+            case "medium" -> 2.50;
+            case "large" -> 3.00;
+            default ->
+            {
+                System.out.println("Invalid size. Setting price to $0.00.");
+                yield 0.0;
+            }
+        };
     }
 
-    public void addDrink(double price)
+    @Override
+    public String toString()
     {
-
+        return "Drink{" + "size: '" + size + '\'' + '}';
     }
 }
