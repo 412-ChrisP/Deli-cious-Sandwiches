@@ -1,16 +1,22 @@
 package YearUp.pluralsight;
 
+import java.util.*;
+
 public class MeatToppings extends Toppings
 {
+    static Scanner scanner = new Scanner(System.in);
+
     public MeatToppings(String name)
     {
-        super(name);
+        super();
     }
 
-    public String getMeatTopping()
+    public static void getMeatTopping()
     {
-
-        return "";
+        System.out.print("Enter meat topping (steak - ham - salami - roast beef - chicken - bacon): ");
+        String meatName = scanner.nextLine();
+        System.out.println("Added " + meatName);
+        new MeatToppings(meatName);
     }
 
     @Override

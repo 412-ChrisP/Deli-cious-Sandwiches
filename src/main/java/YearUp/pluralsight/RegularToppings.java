@@ -1,16 +1,22 @@
 package YearUp.pluralsight;
 
+import java.util.*;
+
 public class RegularToppings extends Toppings
 {
+    static Scanner scanner = new Scanner(System.in);
+
     public RegularToppings(String name)
     {
-        super(name);
+        super();
     }
 
-    public String getRegularTopping()
+    public static void getRegularTopping()
     {
-
-        return "";
+        System.out.print("Enter regular topping (lettuce - peppers - onions - tomatoes - jalepenos - cucumbers - pickles - guacamole - mushrooms): ");
+        String regularToppingName = scanner.nextLine();
+        System.out.println("Added " + regularToppingName);
+        new RegularToppings(regularToppingName);
     }
 
     @Override

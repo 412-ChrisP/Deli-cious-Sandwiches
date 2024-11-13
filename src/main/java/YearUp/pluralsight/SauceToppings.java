@@ -1,16 +1,22 @@
 package YearUp.pluralsight;
 
+import java.util.*;
+
 public class SauceToppings extends Toppings
 {
+    static Scanner scanner = new Scanner(System.in);
+
     public SauceToppings(String name)
     {
-        super(name);
+        super();
     }
 
-    public String getSauceTopping()
+    public static void getSauceTopping()
     {
-
-        return "";
+        System.out.print("Enter sauce topping (mayo - mustard - ketchup - ranch - thousand islands - vinaigrette): ");
+        String sauceName = scanner.nextLine();
+        System.out.println("Added " + sauceName);
+        new SauceToppings(sauceName);
     }
 
     @Override

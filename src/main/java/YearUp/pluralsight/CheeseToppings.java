@@ -1,16 +1,21 @@
 package YearUp.pluralsight;
 
+import java.util.*;
+
 public class CheeseToppings extends Toppings
 {
     public CheeseToppings(String name)
     {
-        super(name);
+        super();
     }
 
-    public String getCheeseTopping()
+    public static void getCheeseTopping()
     {
-
-        return "";
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter cheese topping (american - provolone - cheddar - swiss): ");
+        String cheeseName = scanner.nextLine();
+        System.out.println("Added " + cheeseName);
+        new CheeseToppings(cheeseName);
     }
 
     @Override
