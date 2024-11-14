@@ -4,7 +4,7 @@
 
 - This is a CLI application intended to serve as a sandwich shop giving users options to purchase customizable sandwiches based on personal preferences and side options as well.
 
-[Deli-ciousSandwichesDiagram.drawio](Deli-ciousSandwichesDiagram.drawio)
+![Screenshot 2024-11-14 160126.png](Screenshot%202024-11-14%20160126.png)
 
 ## User Stories
 
@@ -35,17 +35,26 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ## Technologies Used
 
 - Java: Mention the version you are using.
-- Any additional libraries or frameworks used in the project.
+- import java.io.BufferedWriter; 
+- import java.io.File; 
+- import java.io.FileWriter; 
+- import java.io.IOException;
+- import static org.junit.jupiter.api.Assertions.*; 
+- import org.junit.jupiter.api.Test;
 
 ## Demo
 
-Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
+![Screenshot 2024-11-13 153548.png](Screenshot%202024-11-13%20153548.png)
 
-![Application Screenshot](path/to/your/screenshot.png)
+
+
 
 ## Future Work
 
-- 
+- Improve IU
+- Discount/coupon system
+- Inventory manager system
+- rewards/loyalty system
 
 ## Resources
 
