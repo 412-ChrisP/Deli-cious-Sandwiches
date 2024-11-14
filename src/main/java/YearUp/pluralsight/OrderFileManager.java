@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class OrderFileManager
@@ -20,19 +21,19 @@ public class OrderFileManager
                 receiptFile.createNewFile();
             }
 
+            String timestamp = new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date());
             String receiptContent = formatReceipt(order);
 
-            try (FileWriter writer = new FileWriter(RECEIPT_FILE_PATH, true);
+            try (FileWriter writer = new FileWriter(receiptFile, true);
                  BufferedWriter bufferedWriter = new BufferedWriter(writer))
             {
+                bufferedWriter.write("Order Timestamp: " + timestamp);
                 bufferedWriter.write(receiptContent);
-                bufferedWriter.newLine();
                 bufferedWriter.write("--------------------------------------------------");
-                bufferedWriter.newLine();
             }
             catch (IOException e)
             {
-                throw new RuntimeException(e);
+                throw new RuntimeException("Error writing to file: " + e.getMessage(), e);
             }
 
             System.out.println("Receipt saved successfully to " + RECEIPT_FILE_PATH);
@@ -47,7 +48,7 @@ public class OrderFileManager
     {
         StringBuilder receiptBuilder = new StringBuilder();
 
-        receiptBuilder.append("Order Receipt:\n");
+        receiptBuilder.append("\nOrder Receipt:\n");
         receiptBuilder.append("Sandwiches:\n");
         for (Sandwich sandwich : order.getSandwiches())
         {
