@@ -11,12 +11,12 @@ public class RegularToppings extends Toppings
         super();
     }
 
-    public static void getRegularTopping()
+    public static Toppings getRegularTopping()
     {
         System.out.print("Enter regular topping (lettuce - peppers - onions - tomatoes - jalepenos - cucumbers - pickles - guacamole - mushrooms): ");
         String regularToppingName = scanner.nextLine();
         System.out.println("Added " + regularToppingName);
-        new RegularToppings(regularToppingName);
+        return new RegularToppings(regularToppingName);
     }
 
     @Override

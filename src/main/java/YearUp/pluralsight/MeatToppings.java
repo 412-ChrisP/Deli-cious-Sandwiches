@@ -11,12 +11,12 @@ public class MeatToppings extends Toppings
         super();
     }
 
-    public static void getMeatTopping()
+    public static Toppings getMeatTopping()
     {
         System.out.print("Enter meat topping (steak - ham - salami - roast beef - chicken - bacon): ");
         String meatName = scanner.nextLine();
         System.out.println("Added " + meatName);
-        new MeatToppings(meatName);
+        return new MeatToppings(meatName);
     }
 
     @Override

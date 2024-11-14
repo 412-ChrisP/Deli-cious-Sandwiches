@@ -11,12 +11,12 @@ public class SauceToppings extends Toppings
         super();
     }
 
-    public static void getSauceTopping()
+    public static Toppings getSauceTopping()
     {
         System.out.print("Enter sauce topping (mayo - mustard - ketchup - ranch - thousand islands - vinaigrette): ");
         String sauceName = scanner.nextLine();
         System.out.println("Added " + sauceName);
-        new SauceToppings(sauceName);
+        return new SauceToppings(sauceName);
     }
 
     @Override

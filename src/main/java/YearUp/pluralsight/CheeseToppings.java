@@ -9,13 +9,13 @@ public class CheeseToppings extends Toppings
         super();
     }
 
-    public static void getCheeseTopping()
+    public static Toppings getCheeseTopping()
     {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter cheese topping (american - provolone - cheddar - swiss): ");
         String cheeseName = scanner.nextLine();
         System.out.println("Added " + cheeseName);
-        new CheeseToppings(cheeseName);
+        return new CheeseToppings(cheeseName);
     }
 
     @Override

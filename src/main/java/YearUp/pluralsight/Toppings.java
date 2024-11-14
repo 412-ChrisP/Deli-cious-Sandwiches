@@ -15,14 +15,15 @@ public abstract class Toppings
         return name;
     }
 
-    public void getToppingType()
+    public static Toppings getToppingType()
     {
         Scanner scanner = new Scanner(System.in);
+        Toppings toppingsSelection = null;
 
         boolean addingToppings = true;
         while (addingToppings)
         {
-            System.out.println("Select a topping category:");
+            System.out.println("\nSelect a topping category:");
             System.out.println("1) Meat");
             System.out.println("2) Cheese");
             System.out.println("3) Regular Toppings");
@@ -34,14 +35,16 @@ public abstract class Toppings
 
             switch (choice)
             {
-                case 1 -> MeatToppings.getMeatTopping();
-                case 2 -> CheeseToppings.getCheeseTopping();
-                case 3 -> RegularToppings.getRegularTopping();
-                case 4 -> SauceToppings.getSauceTopping();
+                case 1 -> toppingsSelection = MeatToppings.getMeatTopping();
+                case 2 -> toppingsSelection = CheeseToppings.getCheeseTopping();
+                case 3 -> toppingsSelection = RegularToppings.getRegularTopping();
+                case 4 -> toppingsSelection = SauceToppings.getSauceTopping();
                 case 0 -> addingToppings = false;
                 default -> System.out.println("Invalid choice. Please try again.");
             }
         }
+
+        return toppingsSelection;
     }
 
     public abstract double calcToppingPrice(SandwichSize size);
