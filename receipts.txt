@@ -1,0 +1,26 @@
+Order Timestamp: 20241114-200505
+Order Receipt:
+
+Sandwich
+Size: EIGHT_INCH
+Bread: white
+Toasted: true
+Toppings: [steak, cheese, ranch]
+Drinks:
+Chips:
+Total: $10.50
+--------------------------------------------------
+Order Timestamp: 20241114-201514
+Order Receipt:
+
+Sandwich
+Size: TWELVE_INCH
+Bread: rye
+Toasted: false
+Toppings: [steak, swiss, mushrooms, mayo]
+Drinks:
+Drink{size: 'Small'}
+Chips:
+Chips{type: ''}
+Total: $17.25
+--------------------------------------------------

@@ -44,12 +44,13 @@ public class Order
             total += chips.getChipPrice();
         }
 
-        System.out.println("Order Details:");
+        System.out.println("\nOrder Details:");
         System.out.println("Sandwiches: " + sandwiches.size());
         System.out.println("Drinks: " + drinks.size());
         System.out.println("Chips: " + chips.size());
         System.out.printf("Total: $%.2f%n", total);
 
+        OrderFileManager.saveReceipt(this);
     }
 
     public void cancelOrder()
@@ -58,5 +59,20 @@ public class Order
         drinks.clear();
         chips.clear();
         System.out.println("Order canceled.");
+    }
+
+    public List<Sandwich> getSandwiches()
+    {
+        return sandwiches;
+    }
+
+    public List<Drink> getDrinks()
+    {
+        return drinks;
+    }
+
+    public List<Chips> getChips()
+    {
+        return chips;
     }
 }

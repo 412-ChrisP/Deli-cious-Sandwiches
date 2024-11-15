@@ -109,7 +109,7 @@ public class Userinterface
 
     public static void addChips(Order order)
     {
-        Chips chips = new Chips("Default");
+        Chips chips = new Chips("Small");
         order.addChips(chips);
         System.out.println("Chips added to order.");
     }

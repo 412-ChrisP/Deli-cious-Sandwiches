@@ -50,7 +50,6 @@ public class OrderFileManager
         double total = 0.0;
 
         receiptBuilder.append("\nOrder Receipt:\n");
-        receiptBuilder.append("Sandwiches:\n");
         for (Sandwich sandwich : order.getSandwiches())
         {
             receiptBuilder.append(sandwich.toString()).append("\n");

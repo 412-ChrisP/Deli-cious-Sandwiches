@@ -16,7 +16,7 @@ public abstract class Toppings
         return name;
     }
 
-    public static Toppings getToppingType()
+    public static Toppings getToppingType(List<Toppings> toppingsList)
     {
         Scanner scanner = new Scanner(System.in);
         Toppings toppingsSelection = null;
@@ -42,6 +42,10 @@ public abstract class Toppings
                 case 4 -> toppingsSelection = SauceToppings.getSauceTopping();
                 case 0 -> addingToppings = false;
                 default -> System.out.println("Invalid choice. Please try again.");
+            }
+            if (choice != 0 && toppingsSelection != null)
+            {
+                toppingsList.add(toppingsSelection);
             }
         }
 
