@@ -8,7 +8,7 @@ public class MeatToppings extends Toppings
 
     public MeatToppings(String name)
     {
-        super();
+        super(name);
     }
 
     public static Toppings getMeatTopping()
@@ -29,5 +29,11 @@ public class MeatToppings extends Toppings
             case TWELVE_INCH -> 3.00;
             default -> 0.0;
         };
+    }
+
+    @Override
+    public String toString()
+    {
+        return name;
     }
 }

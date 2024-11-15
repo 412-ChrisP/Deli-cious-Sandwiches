@@ -6,8 +6,9 @@ public abstract class Toppings
 {
     protected String name;
 
-    public Toppings()
+    public Toppings(String name)
     {
+        this.name = name;
     }
 
     public String getName()

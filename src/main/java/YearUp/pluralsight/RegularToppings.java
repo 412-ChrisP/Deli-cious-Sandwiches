@@ -8,7 +8,7 @@ public class RegularToppings extends Toppings
 
     public RegularToppings(String name)
     {
-        super();
+        super(name);
     }
 
     public static Toppings getRegularTopping()
@@ -17,6 +17,12 @@ public class RegularToppings extends Toppings
         String regularToppingName = scanner.nextLine();
         System.out.println("Added " + regularToppingName);
         return new RegularToppings(regularToppingName);
+    }
+
+    @Override
+    public String toString()
+    {
+        return name;
     }
 
     @Override

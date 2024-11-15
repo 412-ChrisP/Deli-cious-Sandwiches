@@ -8,7 +8,7 @@ public class SauceToppings extends Toppings
 
     public SauceToppings(String name)
     {
-        super();
+        super(name);
     }
 
     public static Toppings getSauceTopping()
@@ -17,6 +17,12 @@ public class SauceToppings extends Toppings
         String sauceName = scanner.nextLine();
         System.out.println("Added " + sauceName);
         return new SauceToppings(sauceName);
+    }
+
+    @Override
+    public String toString()
+    {
+        return name;
     }
 
     @Override

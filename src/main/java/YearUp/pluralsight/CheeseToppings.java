@@ -6,7 +6,7 @@ public class CheeseToppings extends Toppings
 {
     public CheeseToppings(String name)
     {
-        super();
+        super(name);
     }
 
     public static Toppings getCheeseTopping()
@@ -28,5 +28,11 @@ public class CheeseToppings extends Toppings
             case TWELVE_INCH -> 2.25;
             default -> 0.0;
         };
+    }
+
+    @Override
+    public String toString()
+    {
+        return name;
     }
 }
