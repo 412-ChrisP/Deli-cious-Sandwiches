@@ -11,7 +11,7 @@ public class OrderFileManager
 {
     private static final String RECEIPT_FILE_PATH = "receipts.txt";
 
-    public static void saveReceipt(Order order)
+    public static void saveReceipt(Order order, double total)
     {
         try
         {
@@ -22,7 +22,7 @@ public class OrderFileManager
             }
 
             String timestamp = new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date());
-            String receiptContent = formatReceipt(order);
+            String receiptContent = formatReceipt(order, total);
 
             try (FileWriter writer = new FileWriter(receiptFile, true);
                  BufferedWriter bufferedWriter = new BufferedWriter(writer))
@@ -44,30 +44,24 @@ public class OrderFileManager
         }
     }
 
-    private static String formatReceipt(Order order)
+    private static String formatReceipt(Order order, double total)
     {
         StringBuilder receiptBuilder = new StringBuilder();
-        double total = 0.0;
 
         receiptBuilder.append("\nOrder Receipt:\n");
         for (Sandwich sandwich : order.getSandwiches())
         {
             receiptBuilder.append(sandwich.toString()).append("\n");
-            total += sandwich.calculateSandwichPrice();
         }
 
-        receiptBuilder.append("Drinks:\n");
         for (Drink drink : order.getDrinks())
         {
             receiptBuilder.append(drink.toString()).append("\n");
-            total += drink.getDrinkPrice();
         }
-
-        receiptBuilder.append("Chips:\n");
+        
         for (Chips chip : order.getChips())
         {
             receiptBuilder.append(chip.toString()).append("\n");
-            total += chip.getChipPrice();
         }
 
         receiptBuilder.append("Total: $").append(String.format("%.2f", total)).append("\n");

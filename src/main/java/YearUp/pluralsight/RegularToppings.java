@@ -13,7 +13,7 @@ public class RegularToppings extends Toppings
 
     public static Toppings getRegularTopping()
     {
-        System.out.print("Enter regular topping (lettuce - peppers - onions - tomatoes - jalepenos - cucumbers - pickles - guacamole - mushrooms): ");
+        System.out.print("Enter regular topping (lettuce - peppers - onions - tomatoes - jalapenos - cucumbers - pickles - guacamole - mushrooms): ");
         String regularToppingName = scanner.nextLine();
         System.out.println("Added " + regularToppingName);
         return new RegularToppings(regularToppingName);

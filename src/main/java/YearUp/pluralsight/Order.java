@@ -50,7 +50,7 @@ public class Order
         System.out.println("Chips: " + chips.size());
         System.out.printf("Total: $%.2f%n", total);
 
-        OrderFileManager.saveReceipt(this);
+        OrderFileManager.saveReceipt(this, total);
     }
 
     public void cancelOrder()

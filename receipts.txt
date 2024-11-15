@@ -24,3 +24,15 @@ Chips:
 Chips{type: ''}
 Total: $17.25
 --------------------------------------------------
+Order Timestamp: 20241114-204206
+Order Receipt:
+
+Sandwich
+Size: EIGHT_INCH
+Bread: white
+Toasted: true
+Toppings: [steak, american, lettuce, mayo]
+Drink{size: 'Large'}
+Chips{type: 'Small'}
+Total: $15.00
+--------------------------------------------------
