@@ -45,9 +45,9 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ## Demo
 
 ![Screenshot 2024-11-13 153548.png](Screenshot%202024-11-13%20153548.png)
-
-
-
+![Screenshot 2024-11-14 201901.png](Screenshot%202024-11-14%20201901.png)
+![Screenshot 2024-11-14 201951.png](Screenshot%202024-11-14%20201951.png)
+![Screenshot 2024-11-14 202005.png](Screenshot%202024-11-14%20202005.png)
 
 ## Future Work
 
