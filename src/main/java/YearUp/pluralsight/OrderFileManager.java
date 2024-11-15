@@ -58,7 +58,7 @@ public class OrderFileManager
         {
             receiptBuilder.append(drink.toString()).append("\n");
         }
-        
+
         for (Chips chip : order.getChips())
         {
             receiptBuilder.append(chip.toString()).append("\n");

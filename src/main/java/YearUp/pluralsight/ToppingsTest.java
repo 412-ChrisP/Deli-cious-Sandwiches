@@ -24,10 +24,10 @@ public class ToppingsTest
     {
         // Arrange
         Toppings cheeseTopping = new CheeseToppings("cheddar");
-        double expectedPrice = 1.50;
+        double expectedPrice = 0.75;
 
         // Act
-        double actualPrice = cheeseTopping.calcToppingPrice(SandwichSize.EIGHT_INCH);
+        double actualPrice = cheeseTopping.calcToppingPrice(SandwichSize.FOUR_INCH);
 
         // Assert
         assertEquals(expectedPrice, actualPrice);
@@ -45,5 +45,20 @@ public class ToppingsTest
 
         // Assert
         assertEquals(expectedPrice, actualPrice);
+    }
+
+    @Test
+    public void regularTopping_calcToppingPrice_shoudlReturnZero()
+    {
+        //Arrange
+        Toppings regularTopping = new RegularToppings("lettuce");
+        double expectedPrice = 0.00;
+
+        //Act
+        double actualPrice = regularTopping.calcToppingPrice(SandwichSize.TWELVE_INCH);
+
+        //Assert
+        assertEquals(expectedPrice, actualPrice);
+
     }
 }
