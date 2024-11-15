@@ -27,7 +27,7 @@ public class OrderFileManager
             try (FileWriter writer = new FileWriter(receiptFile, true);
                  BufferedWriter bufferedWriter = new BufferedWriter(writer))
             {
-                bufferedWriter.write("Order Timestamp: " + timestamp);
+                bufferedWriter.write("\nOrder Timestamp: " + timestamp);
                 bufferedWriter.write(receiptContent);
                 bufferedWriter.write("--------------------------------------------------");
             }
@@ -47,27 +47,31 @@ public class OrderFileManager
     private static String formatReceipt(Order order)
     {
         StringBuilder receiptBuilder = new StringBuilder();
+        double total = 0.0;
 
         receiptBuilder.append("\nOrder Receipt:\n");
         receiptBuilder.append("Sandwiches:\n");
         for (Sandwich sandwich : order.getSandwiches())
         {
             receiptBuilder.append(sandwich.toString()).append("\n");
+            total += sandwich.calculateSandwichPrice();
         }
 
         receiptBuilder.append("Drinks:\n");
         for (Drink drink : order.getDrinks())
         {
             receiptBuilder.append(drink.toString()).append("\n");
+            total += drink.getDrinkPrice();
         }
 
         receiptBuilder.append("Chips:\n");
-        for (Chips chips : order.getChips())
+        for (Chips chip : order.getChips())
         {
-            receiptBuilder.append(chips.toString()).append("\n");
+            receiptBuilder.append(chip.toString()).append("\n");
+            total += chip.getChipPrice();
         }
 
-        receiptBuilder.append("Total: $").append(order.getTotal()).append("\n");
+        receiptBuilder.append("Total: $").append(String.format("%.2f", total)).append("\n");
 
         return receiptBuilder.toString();
     }
