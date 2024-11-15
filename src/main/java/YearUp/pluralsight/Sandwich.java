@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Sandwich
 {
-    private String size;
+    private SandwichSize size;
     private String bread;
     private boolean toasted;
     private final List<Toppings> toppings = new ArrayList<>();
@@ -21,9 +21,9 @@ public class Sandwich
     {
         switch (size)
         {
-            case "4" -> this.size = String.valueOf(SandwichSize.FOUR_INCH);
-            case "8" -> this.size = String.valueOf(SandwichSize.EIGHT_INCH);
-            case "12" -> this.size = String.valueOf(SandwichSize.TWELVE_INCH);
+            case "4" -> this.size = SandwichSize.FOUR_INCH;
+            case "8" -> this.size = SandwichSize.EIGHT_INCH;
+            case "12" -> this.size = SandwichSize.TWELVE_INCH;
             default -> throw new IllegalArgumentException("Invalid sandwich size: " + size);
         }
     }
@@ -31,28 +31,26 @@ public class Sandwich
     public double calculateSandwichPrice()
     {
         double totalPrice = 0.0;
-        SandwichSize sandwichSize = SandwichSize.valueOf(size.toUpperCase());
+        double breadPrice = 0.0;
+
+        switch (size)
+        {
+            case FOUR_INCH -> breadPrice = 5.50;
+            case EIGHT_INCH -> breadPrice = 7.00;
+            case TWELVE_INCH -> breadPrice = 8.50;
+        }
 
         for (Toppings topping : toppings)
         {
-            totalPrice += topping.calcToppingPrice(sandwichSize);
+            totalPrice += topping.calcToppingPrice(size);
         }
 
-        return totalPrice;
+        return breadPrice + totalPrice;
     }
 
     public void addToppings()
     {
-        Toppings toppingsSelection = new Toppings()
-        {
-            @Override
-            public double calcToppingPrice(SandwichSize size)
-            {
-                return 0;
-            }
-        };
-
-        toppingsSelection.getToppingType();
+        Toppings.getToppingType(toppings);
     }
 
     public void setToasted(boolean toasted)
@@ -63,11 +61,10 @@ public class Sandwich
     @Override
     public String toString()
     {
-        return "Sandwich{" +
-                "size:'" + size + '\'' +
-                ", bread:'" + bread + '\'' +
-                ", toasted:" + toasted +
-                ", toppings:" + toppings +
-                '}';
+        return "\nSandwich\n" +
+                "Size: " + size +
+                "\nBread: " + bread +
+                "\nToasted: " + toasted +
+                "\nToppings: " + toppings;
     }
 }
